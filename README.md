@@ -47,7 +47,8 @@ pip install requests
 A princípio, minha prioridade era escolher uma API simples, que me retornasse dados de maneira limpa e que de certa forma fossem fáceis de manipular. A API em questão foi a [REST COUNTRIES](https://restcountries.com/), que me retorna qualquer informação acerca de um país do mundo.
 
 # Acesso a API
-Primeiramente, ao dar o ```py manage.py runserver```, é predefinido um IP local: “http://127.0.0.1:8000/”. Com base nisso, deve-se adicionar os endereçamento correto levando para o CRUD ligado a API em questão. Link esse definido no .Paises/api/urls.py, sendo ele: “http://127.0.0.1:8000/api/paises/”. O usuário deve usar esse link para qualquer tarefa. 
+
+Antes de qualquer coisa é necessario dar os seguintes comandos no terminal(dentro da venv): ```py manage.py makemigrations```, depois o ```py manage.py migrate```. Agora ao dar o ```py manage.py runserver```, é predefinido um IP local: “http://127.0.0.1:8000/”. Com base nisso, deve-se adicionar os endereçamento correto levando para o CRUD ligado a API em questão. Link esse definido no .Paises/api/urls.py, sendo ele: “http://127.0.0.1:8000/api/paises/”. O usuário deve usar esse link para qualquer tarefa. 
 
 # Métodos POST, GET (ou PATCH), DELETE através do INSOMNIA
 Uma vez configurada no .Paises/api/viewsets.py, a função “create()” tem esse papel sob a API em si. 
