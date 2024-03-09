@@ -21,9 +21,11 @@ class PaisViewSet(ModelViewSet):
         requisicao = requests.get(url)
         json_data = requisicao.json()
 
+
+        #Nessa questão do if tive auxiilio do ChaTGPT. 
+        #Enfrentei uma dificuldade com o request da API em questão, pois seu JSON estão dentro de [], e que de alguma forma o GET não funcionava. 
         if isinstance(json_data, list) and json_data:
-            # Se há dados retornados na lista
-            country_info = json_data[0]  # Vamos pegar o primeiro país da lista
+            country_info = json_data[0]  
             name = country_info.get('name','')
             capital = country_info.get('capital','')
             subregion = country_info.get('subregion','')
